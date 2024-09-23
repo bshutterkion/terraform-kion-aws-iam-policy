@@ -60,3 +60,9 @@ variable "policy_type" {
   type        = string
   default     = "user_managed"
 }
+
+variable "system_managed_policies" {
+  description = "List of all system-managed policies"
+  type        = list(map(string))
+  default     = []
+}

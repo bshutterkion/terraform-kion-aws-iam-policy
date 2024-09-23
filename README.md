@@ -20,7 +20,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [kion_aws_iam_policy.user_managed](https://registry.terraform.io/providers/kionsoftware/kion/latest/docs/resources/aws_iam_policy) | resource |
-| [kion_aws_iam_policy.system_managed](https://registry.terraform.io/providers/kionsoftware/kion/latest/docs/data-sources/aws_iam_policy) | data source |
+| [kion_aws_iam_policy.all_policies](https://registry.terraform.io/providers/kionsoftware/kion/latest/docs/data-sources/aws_iam_policy) | data source |
 
 ## Inputs
 
@@ -36,10 +36,13 @@ No modules.
 | <a name="input_policy"></a> [policy](#input\_policy) | The IAM policy document | `string` | `null` | no |
 | <a name="input_policy_template"></a> [policy\_template](#input\_policy\_template) | Path to the IAM policy template file | `string` | `null` | no |
 | <a name="input_policy_type"></a> [policy\_type](#input\_policy\_type) | Type of the policy: user\_managed or system\_managed | `string` | `"user_managed"` | no |
+| <a name="input_system_managed_policies"></a> [system\_managed\_policies](#input\_system\_managed\_policies) | List of all system-managed policies | `list(map(string))` | `[]` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_aws_iam_policy_id"></a> [aws\_iam\_policy\_id](#output\_aws\_iam\_policy\_id) | ID of the created or retrieved AWS IAM policy |
+| <a name="output_id"></a> [id](#output\_id) | The ID of the created IAM policy |
+| <a name="output_policy_id"></a> [policy\_id](#output\_policy\_id) | The ID of the created IAM policy |
+| <a name="output_policy_ids"></a> [policy\_ids](#output\_policy\_ids) | The IDs of all created IAM policies |
 <!-- END_TF_DOCS -->
